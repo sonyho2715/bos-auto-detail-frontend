@@ -9,13 +9,13 @@ import Head from 'next/head';
 export default function Pricing() {
   const beforeAfterExamples = [
     {
-      before: 'https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800',
-      after: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800',
+      beforeImage: 'https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800',
+      afterImage: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800',
       title: 'Premium Detail - Luxury Sedan',
     },
     {
-      before: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800',
-      after: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800',
+      beforeImage: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800',
+      afterImage: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800',
       title: 'Ceramic Coating - Sports Car',
     },
   ];
