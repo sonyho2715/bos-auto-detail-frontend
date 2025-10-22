@@ -1,6 +1,7 @@
 // src/pages/index.tsx
 import React from 'react';
 import { Navigation, HeroSection, ServiceCard, Footer } from '@/components';
+import { SEO } from '@/components/SEO/SEO';
 
 const servicesData = [
   {
@@ -49,9 +50,11 @@ const servicesData = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-      <HeroSection />
+    <>
+      <SEO />
+      <div className="min-h-screen bg-white">
+        <Navigation />
+        <HeroSection />
 
       {/* Services Section */}
       <section className="py-20 px-4 bg-gray-50">
@@ -122,7 +125,8 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
