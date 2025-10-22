@@ -33,7 +33,7 @@ export function useFormValidation(initialState: any, rules: ValidationRules) {
     [validate]
   );
 
-  const handleBlur = useCallback((e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleBlur = useCallback((e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
   }, []);
