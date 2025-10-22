@@ -20,10 +20,22 @@ function generateSiteMap() {
        <priority>0.9</priority>
      </url>
      <url>
+       <loc>${baseUrl}/pricing</loc>
+       <lastmod>${currentDate}</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.9</priority>
+     </url>
+     <url>
        <loc>${baseUrl}/book</loc>
        <lastmod>${currentDate}</lastmod>
        <changefreq>monthly</changefreq>
        <priority>0.9</priority>
+     </url>
+     <url>
+       <loc>${baseUrl}/reviews</loc>
+       <lastmod>${currentDate}</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8</priority>
      </url>
      <url>
        <loc>${baseUrl}/gallery</loc>

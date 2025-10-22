@@ -1,8 +1,10 @@
 // src/pages/index.tsx
 import React from 'react';
+import Link from 'next/link';
 import { Navigation, HeroSection, ServiceCard, Footer } from '@/components';
 import { SEO } from '@/components/SEO/SEO';
 import { Schema } from '@/components/Schema/Schema';
+import { motion } from 'framer-motion';
 
 const servicesData = [
   {

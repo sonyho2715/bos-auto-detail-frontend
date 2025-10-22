@@ -10,3 +10,5 @@ export { TestimonialCard } from './TestimonialCard/TestimonialCard';
 export { SEO } from './SEO/SEO';
 export { Schema } from './Schema/Schema';
 export { Spinner, LoadingOverlay } from './Spinner/Spinner';
+export { BeforeAfterSlider } from './BeforeAfterSlider/BeforeAfterSlider';
+export { PriceCalculator } from './PriceCalculator/PriceCalculator';

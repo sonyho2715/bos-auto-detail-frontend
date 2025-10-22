@@ -3,88 +3,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Navigation, Footer, Button } from '@/components';
 import { TestimonialCard } from '@/components/TestimonialCard/TestimonialCard';
+import { realTestimonials, businessStats } from '@/data/realTestimonials';
 import Link from 'next/link';
 
-const reviews = [
-  {
-    name: 'Michael Chen',
-    rating: 5,
-    date: 'October 15, 2025',
-    review: 'Absolutely phenomenal service! My Tesla Model S looks brand new after their ceramic coating treatment. The attention to detail is unmatched. Worth every penny!',
-    service: 'Ceramic Coating',
-    verified: true,
-  },
-  {
-    name: 'Sarah Johnson',
-    rating: 5,
-    date: 'October 10, 2025',
-    review: 'Bo\'s team has been taking care of my Porsche 911 for over 5 years. They treat it like their own. The premium detail package is exceptional, and the mobile service is so convenient!',
-    service: 'Premium Detail',
-    verified: true,
-  },
-  {
-    name: 'David Martinez',
-    rating: 5,
-    date: 'October 5, 2025',
-    review: 'I was skeptical about the price initially, but after seeing the results on my Range Rover, I understand why Bo\'s is considered the best in Honolulu. The paint correction was incredible.',
-    service: 'Luxury Detail',
-    verified: true,
-  },
-  {
-    name: 'Jennifer Wong',
-    rating: 5,
-    date: 'September 28, 2025',
-    review: 'The mobile service is a game-changer! They came to my office and detailed my BMW X5 while I was in meetings. Came out to a showroom-quality vehicle. Highly recommend!',
-    service: 'Mobile Service',
-    verified: true,
-  },
-  {
-    name: 'Robert Taylor',
-    rating: 5,
-    date: 'September 20, 2025',
-    review: 'Been coming to Bo\'s since 1998. The consistency in quality and service is remarkable. My Mercedes S-Class always looks pristine after their care.',
-    service: 'Premium Detail',
-    verified: true,
-  },
-  {
-    name: 'Lisa Anderson',
-    rating: 5,
-    date: 'September 15, 2025',
-    review: 'The interior detailing on my Lexus was outstanding. They removed stains I thought were permanent and the leather conditioning made my seats look brand new!',
-    service: 'Interior Only',
-    verified: true,
-  },
-  {
-    name: 'James Kim',
-    rating: 5,
-    date: 'September 8, 2025',
-    review: 'Professional, courteous, and meticulous. The headlight restoration made a huge difference. My Audi A8 looks 5 years younger. Thank you Bo\'s!',
-    service: 'Luxury Detail',
-    verified: true,
-  },
-  {
-    name: 'Amanda Rodriguez',
-    rating: 5,
-    date: 'September 1, 2025',
-    review: 'First time customer and I\'m blown away! The express detail exceeded my expectations. Fast, thorough, and affordable. Will definitely be back!',
-    service: 'Express Detail',
-    verified: true,
-  },
-  {
-    name: 'Christopher Lee',
-    rating: 5,
-    date: 'August 25, 2025',
-    review: 'The ceramic coating on my Ferrari is still beading water perfectly after a year. Best investment for protecting my vehicle. Bo\'s knows luxury cars!',
-    service: 'Ceramic Coating',
-    verified: true,
-  },
-];
-
 const stats = [
-  { value: '500+', label: '5-Star Reviews' },
-  { value: '98%', label: 'Customer Satisfaction' },
-  { value: '30+', label: 'Years in Business' },
-  { value: '15K+', label: 'Vehicles Detailed' },
+  { value: `${businessStats.totalReviews}+`, label: 'Customer Reviews' },
+  { value: businessStats.bbbRating, label: 'BBB Rating' },
+  { value: `${businessStats.yearsInBusiness}+`, label: 'Years in Business' },
+  { value: businessStats.vehiclesDetailed, label: 'Vehicles Detailed' },
 ];
 
 export default function Reviews() {
@@ -166,7 +92,7 @@ export default function Reviews() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {reviews.map((review, index) => (
+            {realTestimonials.map((review, index) => (
               <TestimonialCard key={index} {...review} />
             ))}
           </div>

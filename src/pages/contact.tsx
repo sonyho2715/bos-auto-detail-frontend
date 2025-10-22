@@ -92,13 +92,13 @@ export default function Contact() {
               {
                 icon: '📞',
                 title: 'Call Us',
-                info: '(808) 555-0123',
-                info2: 'Mon-Sat: 8am - 6pm',
+                info: '(808) 782-1526',
+                info2: 'Mon-Sat: 8am - 4pm',
               },
               {
                 icon: '✉️',
                 title: 'Email Us',
-                info: 'info@bosautodetail.com',
+                info: 'bosautodetail1@gmail.com',
                 info2: 'We reply within 24 hours',
               },
             ].map((item, index) => (
@@ -235,9 +235,8 @@ export default function Contact() {
                 </h3>
                 <div className="space-y-3">
                   {[
-                    { day: 'Monday - Friday', hours: '8:00 AM - 6:00 PM' },
-                    { day: 'Saturday', hours: '9:00 AM - 5:00 PM' },
-                    { day: 'Sunday', hours: 'By Appointment Only' },
+                    { day: 'Monday - Saturday', hours: '8:00 AM - 4:00 PM' },
+                    { day: 'Sunday', hours: 'Closed' },
                   ].map((schedule, index) => (
                     <div
                       key={index}
