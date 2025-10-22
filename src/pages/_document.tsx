@@ -1,5 +1,6 @@
 // src/pages/_document.tsx
 import { Html, Head, Main, NextScript } from 'next/document';
+import { GA_TRACKING_ID } from '@/lib/analytics';
 
 export default function Document() {
   return (
@@ -7,6 +8,24 @@ export default function Document() {
       <Head>
         <meta name="description" content="Bo's Auto Detail - Premier luxury vehicle detailing in Honolulu since 1992" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
       </Head>
       <body>
         <Main />

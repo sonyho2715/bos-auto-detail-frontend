@@ -2,6 +2,7 @@
 import React from 'react';
 import { Navigation, HeroSection, ServiceCard, Footer } from '@/components';
 import { SEO } from '@/components/SEO/SEO';
+import { Schema } from '@/components/Schema/Schema';
 
 const servicesData = [
   {
@@ -52,6 +53,7 @@ export default function Home() {
   return (
     <>
       <SEO />
+      <Schema type="home" />
       <div className="min-h-screen bg-white">
         <Navigation />
         <HeroSection />

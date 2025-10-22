@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Navigation, Footer, Input, Button } from '@/components';
+import { Spinner } from '@/components/Spinner/Spinner';
 import { useFormValidation } from '@/hooks/useFormValidation';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validationRules = {
     name: (value: string) => (!value ? 'Name is required' : null),
@@ -37,11 +39,14 @@ export default function Contact() {
     validationRules
   );
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateAll()) {
-      // In a real app, send to API
+      setIsSubmitting(true);
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
       console.log('Form submitted:', values);
+      setIsSubmitting(false);
       setSubmitted(true);
       reset();
       setTimeout(() => setSubmitted(false), 5000);
@@ -189,8 +194,15 @@ export default function Contact() {
                   placeholder="Tell us about your vehicle and what service you're interested in..."
                 />
 
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message
+                <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <Spinner size="sm" color="white" />
+                      Sending...
+                    </span>
+                  ) : (
+                    'Send Message'
+                  )}
                 </Button>
               </form>
             </motion.div>

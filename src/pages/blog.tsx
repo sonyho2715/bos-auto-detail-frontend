@@ -3,63 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Navigation, Footer } from '@/components';
 import Link from 'next/link';
-
-const blogPosts = [
-  {
-    id: 1,
-    title: '5 Reasons Why Ceramic Coating is Worth the Investment',
-    excerpt: 'Discover why ceramic coating is the ultimate protection for your luxury vehicle and how it can save you money in the long run.',
-    image: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800',
-    category: 'Product Guide',
-    date: 'October 20, 2025',
-    readTime: '5 min read',
-  },
-  {
-    id: 2,
-    title: 'How Often Should You Detail Your Luxury Car?',
-    excerpt: 'Learn the recommended detailing schedule for high-end vehicles to maintain their value and appearance.',
-    image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800',
-    category: 'Maintenance Tips',
-    date: 'October 15, 2025',
-    readTime: '4 min read',
-  },
-  {
-    id: 3,
-    title: 'The Difference Between Waxing and Ceramic Coating',
-    excerpt: 'Understanding the pros and cons of traditional wax versus modern ceramic coating technology.',
-    image: 'https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800',
-    category: 'Product Comparison',
-    date: 'October 10, 2025',
-    readTime: '6 min read',
-  },
-  {
-    id: 4,
-    title: 'Protecting Your Vehicle\'s Interior in Hawaii\'s Climate',
-    excerpt: 'Special considerations for maintaining your car\'s interior in tropical conditions.',
-    image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800',
-    category: 'Local Tips',
-    date: 'October 5, 2025',
-    readTime: '5 min read',
-  },
-  {
-    id: 5,
-    title: 'Paint Correction: What It Is and When You Need It',
-    excerpt: 'Everything you need to know about paint correction and how it can restore your vehicle\'s finish.',
-    image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800',
-    category: 'Services Explained',
-    date: 'September 28, 2025',
-    readTime: '7 min read',
-  },
-  {
-    id: 6,
-    title: 'Top 10 Detailing Mistakes to Avoid',
-    excerpt: 'Common car care mistakes that could be damaging your luxury vehicle without you knowing.',
-    image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800',
-    category: 'DIY Tips',
-    date: 'September 20, 2025',
-    readTime: '6 min read',
-  },
-];
+import { blogPosts } from '@/data/blogPosts';
 
 export default function Blog() {
   return (
@@ -123,7 +67,7 @@ export default function Blog() {
 
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500">{post.date}</span>
-                    <Link href={`/blog/${post.id}`}>
+                    <Link href={`/blog/${post.slug}`}>
                       <span className="text-amber-600 font-semibold hover:text-amber-700 cursor-pointer">
                         Read More →
                       </span>
