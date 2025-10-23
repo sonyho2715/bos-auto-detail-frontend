@@ -64,12 +64,12 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 
         {features.length > 0 && (
           <ul className="space-y-2 mb-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <motion.li
-                key={index}
+                key={feature}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ duration: 0.3 }}
                 className={`flex items-center text-sm ${highlighted ? 'text-gray-100' : 'text-gray-700'}`}
               >
                 <span className="text-amber-600 mr-3 font-bold">✓</span>

@@ -136,12 +136,12 @@ export default function About() {
               { number: '15K+', label: 'Vehicles Detailed' },
               { number: '500+', label: '5-Star Reviews' },
               { number: '98%', label: 'Client Retention' },
-            ].map((stat, index) => (
+            ].map((stat) => (
               <motion.div
-                key={index}
+                key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -172,10 +172,10 @@ export default function About() {
 
             {timeline.map((item, index) => (
               <motion.div
-                key={index}
+                key={item.year}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className={`relative mb-12 md:mb-16 ${
                   index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'
                 }`}
@@ -219,12 +219,12 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value) => (
               <motion.div
-                key={index}
+                key={value.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
               >
                 <div className="text-5xl mb-4">{value.icon}</div>
@@ -249,12 +249,12 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
+            {team.map((member) => (
               <motion.div
-                key={index}
+                key={member.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
               >
                 <div className="aspect-square overflow-hidden">

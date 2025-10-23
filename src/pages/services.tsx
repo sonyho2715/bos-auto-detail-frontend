@@ -161,8 +161,8 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesData.map((service, index) => (
-              <div key={index}>
+            {servicesData.map((service) => (
+              <div key={service.title}>
                 <ServiceCard {...service} />
                 <div className="mt-4 text-center">
                   <p className="text-sm text-gray-600">
@@ -188,13 +188,13 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {addOnsData.map((addon, index) => (
+            {addOnsData.map((addon) => (
               <motion.div
-                key={index}
+                key={addon.name}
                 whileHover={{ y: -4 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-amber-600 transition-colors"
               >
                 <div className="flex items-center justify-between">
@@ -230,12 +230,12 @@ export default function Services() {
               { step: '2', title: 'Vehicle Inspection', desc: 'We assess your vehicle and confirm the service plan' },
               { step: '3', title: 'Expert Detailing', desc: 'Our team performs meticulous work using premium products' },
               { step: '4', title: 'Final Review', desc: 'Quality check and walk-through with you' },
-            ].map((item, index) => (
+            ].map((item) => (
               <motion.div
-                key={index}
+                key={item.step}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">

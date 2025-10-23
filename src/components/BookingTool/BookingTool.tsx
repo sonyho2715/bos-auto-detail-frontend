@@ -65,12 +65,6 @@ export const BookingTool: React.FC = () => {
     e.preventDefault();
     // In a real app, this would send to an API
     alert('Booking request submitted! We will contact you shortly.');
-    console.log({
-      service: selectedService,
-      addOns: selectedAddOns,
-      formData,
-      total: calculateTotal(),
-    });
   };
 
   return (

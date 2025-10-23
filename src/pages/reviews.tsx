@@ -61,12 +61,12 @@ export default function Reviews() {
       <section className="py-12 px-4 bg-amber-600">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
               <motion.div
-                key={index}
+                key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -92,8 +92,8 @@ export default function Reviews() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {realTestimonials.map((review, index) => (
-              <TestimonialCard key={index} {...review} />
+            {realTestimonials.map((review) => (
+              <TestimonialCard key={`${review.name}-${review.date}`} {...review} />
             ))}
           </div>
 
@@ -127,12 +127,12 @@ export default function Reviews() {
               { icon: '✓', title: 'Certified Detailer', year: 'Since 1992' },
               { icon: '⭐', title: 'Top Rated', year: 'Google' },
               { icon: '🛡️', title: 'Insured & Bonded', year: 'Licensed' },
-            ].map((badge, index) => (
+            ].map((badge) => (
               <motion.div
-                key={index}
+                key={badge.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="text-center p-6 border-2 border-gray-200 rounded-xl hover:border-amber-600 transition-colors"
               >
                 <div className="text-5xl mb-3">{badge.icon}</div>

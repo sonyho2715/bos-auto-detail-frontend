@@ -51,12 +51,12 @@ export const Footer: React.FC = () => {
             <p className="text-sm text-gray-500">1142 Bethel St., Honolulu, Hawaii 96817</p>
           </motion.div>
 
-          {footerLinks.map((section, idx) => (
+          {footerLinks.map((section) => (
             <motion.div
-              key={idx}
+              key={section.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: (idx + 1) * 0.1 }}
+              transition={{ duration: 0.6 }}
             >
               <h3 className="font-semibold mb-4 text-amber-400">{section.title}</h3>
               <ul className="space-y-2">
