@@ -120,8 +120,8 @@ export const VideoTestimonialsSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <VideoTestimonial key={index} {...testimonial} />
+          {testimonials.map((testimonial) => (
+            <VideoTestimonial key={testimonial.name} {...testimonial} />
           ))}
         </div>
       </div>
