@@ -71,12 +71,12 @@ export default function Pricing() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {beforeAfterExamples.map((example, index) => (
+              {beforeAfterExamples.map((example) => (
                 <motion.div
-                  key={index}
+                  key={example.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                  transition={{ duration: 0.5 }}
                 >
                   <BeforeAfterSlider {...example} />
                 </motion.div>
@@ -94,12 +94,12 @@ export default function Pricing() {
                 { value: 'A+', label: 'BBB Rating' },
                 { value: '15K+', label: 'Vehicles Detailed' },
                 { value: '85%', label: 'Repeat Customers' },
-              ].map((stat, index) => (
+              ].map((stat) => (
                 <motion.div
-                  key={index}
+                  key={stat.label}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5 }}
                 >
                   <div className="text-4xl font-bold text-amber-400 mb-2">{stat.value}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>

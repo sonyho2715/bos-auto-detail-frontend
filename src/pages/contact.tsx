@@ -45,7 +45,6 @@ export default function Contact() {
       setIsSubmitting(true);
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      console.log('Form submitted:', values);
       setIsSubmitting(false);
       setSubmitted(true);
       reset();
@@ -101,12 +100,12 @@ export default function Contact() {
                 info: 'bosautodetail1@gmail.com',
                 info2: 'We reply within 24 hours',
               },
-            ].map((item, index) => (
+            ].map((item) => (
               <motion.div
-                key={index}
+                key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="text-5xl mb-4">{item.icon}</div>
@@ -237,9 +236,9 @@ export default function Contact() {
                   {[
                     { day: 'Monday - Saturday', hours: '8:00 AM - 4:00 PM' },
                     { day: 'Sunday', hours: 'Closed' },
-                  ].map((schedule, index) => (
+                  ].map((schedule) => (
                     <div
-                      key={index}
+                      key={schedule.day}
                       className="flex justify-between items-center pb-3 border-b border-gray-200 last:border-0"
                     >
                       <span className="font-semibold text-gray-700">{schedule.day}</span>
@@ -287,12 +286,12 @@ export default function Contact() {
                 q: 'What payment methods do you accept?',
                 a: 'We accept cash, all major credit cards, Apple Pay, and Venmo for your convenience.',
               },
-            ].map((faq, index) => (
+            ].map((faq) => (
               <motion.div
-                key={index}
+                key={faq.q}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
               >
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">{faq.q}</h3>
