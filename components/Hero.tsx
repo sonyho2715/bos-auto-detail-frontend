@@ -2,13 +2,28 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Shield } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-luxury" />
+      {/* Background Video */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/promo.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-dark-950/80" />
+      </div>
+
+      {/* Background Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-dark-950/50 via-transparent to-dark-950" />
 
       {/* Animated Gold Accent Lines */}
       <div className="absolute inset-0 overflow-hidden">
@@ -32,10 +47,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-2 mb-8"
+          className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 backdrop-blur-sm px-4 py-2 mb-8"
         >
           <Sparkles className="h-4 w-4 text-gold" />
-          <span className="text-sm text-gold">Premium Auto Detailing</span>
+          <span className="text-sm text-gold font-medium">Serving Honolulu Since 1991</span>
         </motion.div>
 
         {/* Main Heading */}
@@ -55,9 +70,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mx-auto mt-6 max-w-2xl text-lg text-dark-400 leading-relaxed"
+          className="mx-auto mt-6 max-w-2xl text-lg text-dark-300 leading-relaxed"
         >
-          Experience luxury auto detailing that transforms your vehicle.
+          Experience luxury auto detailing from Hawaii&apos;s trusted name for over 34 years.
           Meticulous attention to detail, premium products, and unmatched
           craftsmanship.
         </motion.p>
@@ -78,7 +93,7 @@ export function Hero() {
           </Link>
           <Link
             href="/services"
-            className="flex items-center gap-2 rounded-full border border-dark-700 px-8 py-4 text-sm font-semibold text-dark-200 transition-all hover:border-gold hover:text-gold"
+            className="flex items-center gap-2 rounded-full border border-dark-600 bg-dark-950/50 backdrop-blur-sm px-8 py-4 text-sm font-semibold text-dark-200 transition-all hover:border-gold hover:text-gold"
           >
             View Services
           </Link>
@@ -89,18 +104,11 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 flex flex-wrap items-center justify-center gap-8 text-dark-500"
+          className="mt-16 flex flex-wrap items-center justify-center gap-8 text-dark-400"
         >
           <div className="flex items-center gap-2">
-            <div className="flex -space-x-1">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="h-8 w-8 rounded-full bg-dark-700 border-2 border-dark-950"
-                />
-              ))}
-            </div>
-            <span className="text-sm">500+ Happy Customers</span>
+            <Shield className="h-5 w-5 text-gold" />
+            <span className="text-sm font-medium">BBB A+ Rated</span>
           </div>
           <div className="h-6 w-px bg-dark-700 hidden sm:block" />
           <div className="text-sm">
@@ -108,7 +116,7 @@ export function Hero() {
             Google
           </div>
           <div className="h-6 w-px bg-dark-700 hidden sm:block" />
-          <div className="text-sm">10+ Years Experience</div>
+          <div className="text-sm font-medium">34+ Years Experience</div>
         </motion.div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 
 const quickLinks = [
@@ -15,9 +16,18 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <h3 className="font-playfair text-2xl font-bold text-gradient-gold">
-              Bo&apos;s Auto Detail
-            </h3>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="Bo's Auto Detail"
+                width={56}
+                height={56}
+                className="rounded-full"
+              />
+              <h3 className="font-playfair text-2xl font-bold text-gradient-gold">
+                Bo&apos;s Auto Detail
+              </h3>
+            </div>
             <p className="mt-4 text-sm text-dark-400 leading-relaxed">
               Premium auto detailing services. We bring out the best in your
               vehicle with meticulous attention to detail and luxury care.

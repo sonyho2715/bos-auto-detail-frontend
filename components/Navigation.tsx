@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -21,8 +22,16 @@ export function Navigation() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-playfair text-2xl font-bold text-gradient-gold">
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Bo's Auto Detail"
+              width={48}
+              height={48}
+              className="rounded-full"
+              priority
+            />
+            <span className="font-playfair text-xl font-bold text-gradient-gold hidden sm:block">
               Bo&apos;s Auto Detail
             </span>
           </Link>

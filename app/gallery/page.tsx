@@ -1,62 +1,99 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-// Placeholder gallery items - replace with actual images
+// Real gallery items with actual images
 const galleryItems = [
   {
     id: 1,
-    title: "Mercedes-Benz S-Class",
-    category: "Full Detail",
-    description: "Complete interior and exterior transformation",
+    src: "/images/gallery/6088222_orig.jpg",
+    title: "Paint Polishing",
+    category: "Paint Correction",
+    description: "Professional machine polishing for a flawless finish",
   },
   {
     id: 2,
-    title: "BMW M4",
-    category: "Ceramic Coating",
-    description: "IGL Kenzo ceramic coating application",
+    src: "/images/gallery/4616347_orig.jpg",
+    title: "Red Sedan Detail",
+    category: "Full Detail",
+    description: "Complete exterior detail with mirror-like shine",
   },
   {
     id: 3,
-    title: "Porsche 911",
-    category: "Paint Correction",
-    description: "Multi-stage paint correction and polish",
+    src: "/images/gallery/6987270_orig.jpg",
+    title: "Truck Interior",
+    category: "Interior Detail",
+    description: "Deep interior cleaning and conditioning",
   },
   {
     id: 4,
-    title: "Tesla Model S",
+    src: "/images/gallery/9510212_orig.jpg",
+    title: "Wheel Cleaning",
     category: "Full Detail",
-    description: "Premium detail with ceramic top coat",
+    description: "High-pressure wheel and tire cleaning",
   },
   {
     id: 5,
-    title: "Audi RS7",
+    src: "/images/gallery/188168_orig.jpg",
+    title: "Floor Mat Care",
     category: "Interior Detail",
-    description: "Deep leather cleaning and conditioning",
+    description: "Professional floor mat cleaning and drying",
   },
   {
     id: 6,
-    title: "Lexus LC500",
-    category: "Ceramic Coating",
-    description: "Full correction and ceramic protection",
+    src: "/images/gallery/3071327_orig.jpg",
+    title: "Our Shop",
+    category: "Shop",
+    description: "Located at Mark&apos;s Garage in Chinatown",
   },
   {
     id: 7,
-    title: "Range Rover",
-    category: "Full Detail",
-    description: "Complete SUV transformation",
+    src: "/images/gallery/img-0302_orig.jpg",
+    title: "Branded Vehicle",
+    category: "Shop",
+    description: "Our promotional vehicle on the streets of Honolulu",
   },
   {
     id: 8,
-    title: "Ferrari 488",
-    category: "Paint Correction",
-    description: "Swirl removal and paint enhancement",
+    src: "/images/gallery/373942_orig.jpg",
+    title: "Exterior Shine",
+    category: "Full Detail",
+    description: "Complete exterior transformation",
+  },
+  {
+    id: 9,
+    src: "/images/gallery/3836200_orig.jpg",
+    title: "Detail Work",
+    category: "Full Detail",
+    description: "Meticulous attention to every surface",
+  },
+  {
+    id: 10,
+    src: "/images/gallery/3999169_orig.jpg",
+    title: "Clean Finish",
+    category: "Full Detail",
+    description: "Showroom-quality results",
+  },
+  {
+    id: 11,
+    src: "/images/gallery/4722948_orig.jpg",
+    title: "Interior Care",
+    category: "Interior Detail",
+    description: "Complete interior rejuvenation",
+  },
+  {
+    id: 12,
+    src: "/images/gallery/5837924_orig.jpg",
+    title: "Premium Detail",
+    category: "Full Detail",
+    description: "Full service premium detailing",
   },
 ];
 
-const categories = ["All", "Full Detail", "Ceramic Coating", "Paint Correction", "Interior Detail"];
+const categories = ["All", "Full Detail", "Interior Detail", "Paint Correction", "Shop"];
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -96,7 +133,7 @@ export default function GalleryPage() {
             className="mx-auto mt-4 max-w-2xl text-dark-400"
           >
             Browse our portfolio of completed work. Each vehicle represents our
-            commitment to excellence and attention to detail.
+            34 years of commitment to excellence and attention to detail.
           </motion.p>
         </div>
       </section>
@@ -140,8 +177,14 @@ export default function GalleryPage() {
                   onClick={() => setSelectedItem(item)}
                   className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-dark-800 text-left"
                 >
-                  {/* Placeholder - Replace with actual Image component */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-dark-700 to-dark-800" />
+                  {/* Real Image */}
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
 
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-dark-950/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
@@ -189,8 +232,16 @@ export default function GalleryPage() {
                 <X className="h-6 w-6" />
               </button>
 
-              {/* Placeholder for image */}
-              <div className="aspect-video rounded-xl bg-dark-800" />
+              {/* Real image in lightbox */}
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-dark-800">
+                <Image
+                  src={selectedItem.src}
+                  alt={selectedItem.title}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                />
+              </div>
 
               <div className="mt-4">
                 <span className="text-sm font-medium text-gold">
