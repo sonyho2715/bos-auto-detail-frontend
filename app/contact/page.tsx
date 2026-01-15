@@ -79,9 +79,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-dark-50">Location</h3>
                     <p className="mt-1 text-dark-400">
-                      123 Detail Lane
+                      1142 Bethel St (Mark&apos;s Garage)
                       <br />
-                      Honolulu, HI 96815
+                      Honolulu, HI 96813
                     </p>
                   </div>
                 </div>
@@ -93,10 +93,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-dark-50">Phone</h3>
                     <a
-                      href="tel:+18081234567"
+                      href="tel:+18087821526"
                       className="mt-1 text-dark-400 hover:text-gold"
                     >
-                      (808) 123-4567
+                      (808) 782-1526
                     </a>
                   </div>
                 </div>
@@ -108,10 +108,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-dark-50">Email</h3>
                     <a
-                      href="mailto:info@bosautodetail.com"
+                      href="mailto:bosautodetail@gmail.com"
                       className="mt-1 text-dark-400 hover:text-gold"
                     >
-                      info@bosautodetail.com
+                      bosautodetail@gmail.com
                     </a>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-dark-50">Hours</h3>
                     <p className="mt-1 text-dark-400">
-                      Mon - Fri: 8am - 6pm
+                      Mon - Fri: 8am - 4pm
                       <br />
                       Saturday: 9am - 5pm
                       <br />
@@ -133,11 +133,18 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Google Maps Embed */}
               <div className="mt-8 aspect-video rounded-xl bg-dark-800 overflow-hidden">
-                <div className="h-full w-full flex items-center justify-center text-dark-600">
-                  Map placeholder
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.0!2d-157.8614!3d21.3119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006df79f4913d5%3A0x6f8e5f6a0f0f0f0f!2s1142%20Bethel%20St%2C%20Honolulu%2C%20HI%2096813!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Bo&apos;s Auto Detail Location"
+                />
               </div>
             </motion.div>
 

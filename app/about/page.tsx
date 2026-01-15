@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Award, Users, Clock, Heart } from "lucide-react";
 
 const stats = [
-  { value: "10+", label: "Years Experience" },
-  { value: "500+", label: "Vehicles Detailed" },
-  { value: "5.0", label: "Google Rating" },
-  { value: "100%", label: "Satisfaction Rate" },
+  { value: "34", label: "Years in Business" },
+  { value: "1991", label: "Established" },
+  { value: "A+", label: "BBB Rating" },
+  { value: "5.0", label: "Customer Rating" },
 ];
 
 const values = [
@@ -68,10 +68,10 @@ export default function AboutPage() {
                 transition={{ delay: 0.2 }}
                 className="mt-4 text-dark-400 leading-relaxed"
               >
-                Bo&apos;s Auto Detail was founded with a simple mission: to provide
-                the highest quality auto detailing services with unmatched
-                attention to detail. What started as a passion project has grown
-                into a trusted name in premium vehicle care.
+                Since 1991, Bo&apos;s Auto Detail has been Honolulu&apos;s trusted name in
+                premium auto detailing. For over 34 years, we&apos;ve built our
+                reputation on meticulous craftsmanship, honest service, and a
+                genuine passion for making vehicles shine.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -79,10 +79,10 @@ export default function AboutPage() {
                 transition={{ delay: 0.3 }}
                 className="mt-4 text-dark-400 leading-relaxed"
               >
-                Every vehicle that comes through our doors is treated with the
-                same level of care and precision, whether it&apos;s a daily driver or
-                a collector&apos;s dream car. We believe that every vehicle deserves
-                to look its best.
+                Located at Mark&apos;s Garage in the heart of Chinatown, we treat
+                every vehicle with the same level of care and precision, whether
+                it&apos;s a daily driver or a collector&apos;s dream car. Our BBB A+
+                rating reflects our commitment to customer satisfaction.
               </motion.p>
             </div>
 
@@ -136,21 +136,23 @@ export default function AboutPage() {
             </h2>
             <div className="mt-6 space-y-4 text-dark-400 leading-relaxed">
               <p>
-                It all started with a love for cars and a commitment to
-                perfection. After years of working in the automotive industry
-                and seeing how detailing services often cut corners, Bo decided
-                to create something different.
+                In 1991, Bo opened the doors of Bo&apos;s Auto Detail with a simple
+                vision: to provide Honolulu with auto detailing services that
+                truly exceed expectations. What started as a one-man operation
+                driven by passion has grown into a trusted institution in the
+                Hawaiian automotive community.
               </p>
               <p>
-                Bo&apos;s Auto Detail was built on the belief that true quality takes
-                time, expertise, and genuine care. We invested in the best
-                equipment, trained in the latest techniques, and sourced premium
-                products that deliver results you can see and feel.
+                Over three decades later, that same dedication to perfection
+                remains at the heart of everything we do. We&apos;ve earned our BBB
+                A+ rating and accreditation since 2017 by treating every
+                customer like family and every vehicle like our own.
               </p>
               <p>
-                Today, we&apos;re proud to serve our community with the same passion
-                and dedication that started it all. Every vehicle is an
-                opportunity to demonstrate our commitment to excellence.
+                Today, operating out of Mark&apos;s Garage in historic Chinatown,
+                we continue to serve our community with the same passion and
+                dedication that started it all. From basic washes to complete
+                paint corrections, we pour our expertise into every detail.
               </p>
             </div>
           </motion.div>

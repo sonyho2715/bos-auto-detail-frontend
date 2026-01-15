@@ -33,7 +33,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/bo.moore.1426"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-dark-800 text-dark-400 transition-colors hover:bg-gold hover:text-dark-950"
@@ -72,27 +72,27 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold shrink-0 mt-0.5" />
                 <span className="text-sm text-dark-400">
-                  123 Detail Lane
+                  1142 Bethel St (Mark&apos;s Garage)
                   <br />
-                  Honolulu, HI 96815
+                  Honolulu, HI 96813
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-gold shrink-0" />
                 <a
-                  href="tel:+18081234567"
+                  href="tel:+18087821526"
                   className="text-sm text-dark-400 hover:text-gold"
                 >
-                  (808) 123-4567
+                  (808) 782-1526
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gold shrink-0" />
                 <a
-                  href="mailto:info@bosautodetail.com"
+                  href="mailto:bosautodetail@gmail.com"
                   className="text-sm text-dark-400 hover:text-gold"
                 >
-                  info@bosautodetail.com
+                  bosautodetail@gmail.com
                 </a>
               </li>
             </ul>
@@ -107,7 +107,7 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Clock className="h-5 w-5 text-gold shrink-0" />
                 <div className="text-sm text-dark-400">
-                  <p>Mon - Fri: 8am - 6pm</p>
+                  <p>Mon - Fri: 8am - 4pm</p>
                   <p>Saturday: 9am - 5pm</p>
                   <p>Sunday: Closed</p>
                 </div>

@@ -39,7 +39,7 @@ export function Navigation() {
               </Link>
             ))}
             <a
-              href="tel:+18081234567"
+              href="tel:+18087821526"
               className="flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-dark-950 transition-all hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20"
             >
               <Phone className="h-4 w-4" />
@@ -78,7 +78,7 @@ export function Navigation() {
                   </Link>
                 ))}
                 <a
-                  href="tel:+18081234567"
+                  href="tel:+18087821526"
                   className="mt-4 flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-semibold text-dark-950"
                 >
                   <Phone className="h-4 w-4" />
