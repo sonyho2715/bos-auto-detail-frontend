@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Award, Users, Clock, Heart } from "lucide-react";
 
@@ -86,14 +87,27 @@ export default function AboutPage() {
               </motion.p>
             </div>
 
-            {/* Placeholder for owner image */}
+            {/* Owner Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="relative aspect-square rounded-2xl bg-dark-800 overflow-hidden"
+              className="relative aspect-[4/5] rounded-2xl bg-dark-800 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent" />
+              <Image
+                src="/images/bo-owner.jpg"
+                alt="Bo - Owner of Bo's Auto Detail"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-950/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <p className="text-xl font-playfair font-bold text-dark-50">Bo Moore</p>
+                <p className="text-sm text-gold">Owner & Master Detailer</p>
+                <p className="text-xs text-dark-300 mt-1">Serving Honolulu Since 1991</p>
+              </div>
             </motion.div>
           </div>
         </div>
